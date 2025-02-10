@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+html, body {
+    height: 100%;  /* Ensure body and html fill the entire screen */
+    overflow-y: auto;  /* Allow vertical scrolling */
+    margin: 0;  /* Remove default margin */
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to top */
+    padding: 20px;
+    min-height: 100vh;  /* Ensures the image covers the full height of the viewport */
+    overflow-y: auto;  /* Enables vertical scrolling */
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(255, 105, 97, 0.7);
+}
+
+/* Search Section */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+#movieInput {
+    width: 300px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ff6f61;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#movieInput:focus {
+    border-color: #ff8c68;
+}
+
+#searchButton {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchButton:hover {
+    background-color: #e65c50;
+    transform: scale(1.05);
+}
+
+#searchButton:active {
+    transform: scale(0.98);
+}
+
+/* Movie Details Section */
+.movie-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    /* Removed backdrop-filter to remove blur */
+}
+
+.movie-details img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.movie-details img:hover {
+    transform: scale(1.05);
+}
+
+.movie-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.movie-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.movie-details p strong {
+    color: #ff6f61;
+}
+
+.error {
+    color: #ff4c4c;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #movieInput {
+        width: 100%;
+    }
+
+    #searchButton {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .movie-details {
+        padding: 20px;
+    }
+}
